@@ -50,10 +50,10 @@ THEN I exit the application, and the HTML is generated
 ```
 
 ## Installation Instructions
-npm i
+```npm i```
 
 ## Test Instructions
-npm test
+```npm test```
     
 ## Mock-Up
 
