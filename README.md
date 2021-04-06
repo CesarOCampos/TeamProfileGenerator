@@ -2,15 +2,15 @@
 
 #### Table of contents
 
-    1. [Project Task](#project-task)
-    2. [User Story](#user-story)
-    3. [Acceptance Criteria](#acceptance-criteria)
-    4. [Installation Instructions](#installation-instructions)
-    5. [Test Instructions](#test-instructions)
-    6. [Mock Up](#mock-up)
-    7. [Video](#video)
-    8. [License](#license)
-    9. [Questions](#questions)
+1. [Project Task](#project-task)
+2. [User Story](#user-story)
+3. [Acceptance Criteria](#acceptance-criteria)
+4. [Installation Instructions](#installation-instructions)
+5. [Test Instructions](#test-instructions)
+6. [Mock Up](#mock-up)
+7. [Video](#video)
+8. [License](#license)
+9. [Questions](#questions)
 
 ## Project Task
 
@@ -50,18 +50,18 @@ THEN I exit the application, and the HTML is generated
 ```
 
 ## Installation Instructions
-* npm i
+npm i
 
 ## Test Instructions
-* npm test
+npm test
     
 ## Mock-Up
 
 ## Video
 
 ## License 
-* [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
     
 ## Questions
-* Emails me at cesar.campos@email.com
-* Find me on GitHub [CesarOCampos](http://github.com/CesarOCampos)
+Emails me at cesar.campos@email.com
+Find me on GitHub [CesarOCampos](http://github.com/CesarOCampos)
