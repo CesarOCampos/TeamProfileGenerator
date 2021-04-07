@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+const Manager = require("./lib/manager");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
+//const Employee = require("./lib/employee");
+const inquirer = require("inquirer");
+const fs = require("fs");
+
+function writeToFile(fileName, data) {
+    var manager = new Manager(data.mName, data.mId, data.mEmail, data.mOffice);
+    var engineer = new Engineer(data.eName, data.eId, data.eEmail, data.eGithub);
+    var intern = new Intern(data.iName, data.iId, data.iEmail, data.iSchool);
+    //var employee = new Employee(data.EName, data.EID, data.EEmail, data.EGithub);
+
+    var html = `
 <html>
     <head>
         <meta charset="utf-8">
@@ -51,8 +64,112 @@
                         </div>
                     </div>
                 </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
-        crossorigin="anonymous"></script>   
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>   
     </body>
-</html>
+</html>`;
+
+    fs.writeFile(fileName, html,
+        function(err, data) {
+            if (err) {
+                return console.log(err);
+            }
+            console.log(data);
+        })
+}
+
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, generateHTML(data), function(err) {
+//         if (err) {
+//             return console.log(err);
+//         }
+//         console.log(data)
+//     });
+// }
+
+function init() {
+    inquirer.prompt([
+
+        {
+            type: 'input',
+            message: 'Name',
+            name: 'mName'
+        },
+
+        {
+            type: 'input',
+            message: 'ID',
+            name: 'mId'
+        },
+
+        {
+            type: 'input',
+            message: 'Email',
+            name: 'mEmail'
+        },
+
+        {
+            type: 'input',
+            message: 'Office Number',
+            name: 'mOffice'
+        },
+
+        {
+            type: 'input',
+            message: 'Name',
+            name: 'eName'
+        },
+
+        {
+            type: 'input',
+            message: 'ID',
+            name: 'eId'
+        },
+
+        {
+            type: 'input',
+            message: 'Email',
+            name: 'eEmail'
+        },
+
+        {
+            type: 'input',
+            message: 'Github Username',
+            name: 'eGithub'
+        },
+
+        {
+            type: 'input',
+            message: 'Name',
+            name: 'iName'
+        },
+
+        {
+            type: 'input',
+            message: 'ID',
+            name: 'iId'
+        },
+
+        {
+            type: 'input',
+            message: 'Email',
+            name: 'iEmail'
+        },
+
+        {
+            type: 'input',
+            message: 'School',
+            name: 'iSchool'
+        },
+
+    ]).then(answer => {
+        writeToFile("tMember.html", answer)
+    })
+};
+
+
+
+
+
+
+init();

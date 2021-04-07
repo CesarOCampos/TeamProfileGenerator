@@ -8,16 +8,20 @@ describe("Employee constructor ", () => {
         })
 
         it("should have a name property", () => {
-            const name = "Rachel";
-            const newEmployee = new Employee(1, name, "email@email.com")
+            const EMPName = "cesar";
+            const EMPId = 1;
+            const EMPEmail = "employee@test.com";
+            const newEmployee = new Employee(EMPId, EMPName, EMPEmail)
 
-            expect(newEmployee.name).toBe(name)
+            expect(newEmployee.EMPName).toBe(EMPName)
+            expect(newEmployee.EMPId).toBe(EMPId)
+            expect(newEmployee.EMPEmail).toBe(EMPEmail)
         })
     })
 
     describe("getName function", () => {
         it("should retrieve the name propertys value of each instance of an employee", () => {
-            const name = "Rachel";
+            const name = "cesar";
             const newEmployee = new Employee(1, name, "email@email.com")
 
             expect(newEmployee.getName()).toBe(name)
