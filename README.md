@@ -57,11 +57,15 @@ THEN I exit the application, and the HTML is generated
     
 ## Mock-Up
 
+https://prnt.sc/117lyg8
+
 ## Video
+
+https://drive.google.com/file/d/1Xt7zTfEQSa9zKAgiUkJXSm-95Bnq1-M7/view
 
 ## License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project is licensed under the [MIT](https://opensource.org/licenses/MIT) license.
     
 ## Questions
-Emails me at cesar.campos@email.com
+Email me at cesarorlandocampos@gmail.com
 Find me on GitHub [CesarOCampos](http://github.com/CesarOCampos)
