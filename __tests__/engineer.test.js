@@ -1,26 +1,65 @@
-const Employee = require("./Employee.js"); //need to make it as not made
-//{id: name: email:}
-describe("Employee constructor ", () => {
+const Engineer = require("./engineer.js");
+
+describe("Engineer constructor ", () => {
     describe("", () => {
 
-        it("can be an instance of the Employee Class", () => {
-            expect(typeof new Employee()).toBe("object");
+        it("can be an instance of the Engineer Class", () => {
+            expect(typeof new Engineer()).toBe("object");
         })
 
-        it("should have a name property", () => {
-            const name = "cesar";
-            const newEmployee = new Employee(1, name, "email@email.com")
+        it("should have a name, id and email", () => {
+            const empName = "cesar";
+            const empId = 1;
+            const empEmail = "Engineer@test.com";
+            const newEngineer = new Engineer(empId, empName, empEmail);
 
-            expect(newEmployee.name).toBe(name)
+            expect(newEngineer.empName).toBe(empName);
+            expect(newEngineer.empId).toBe(empId);
+            expect(newEngineer.empEmail).toBe(empEmail);
         })
     })
 
     describe("getName function", () => {
-        it("should retrieve the name propertys value of each instance of an employee", () => {
-            const name = "cesar";
-            const newEmployee = new Employee(1, name, "email@email.com")
+        it("should retrieve the name value of each instance of an Engineer", () => {
+            const empName = "cesar";
+            const empId = 1;
+            const empEmail = "Engineer@test.com";
+            const newEngineer = new Engineer(empId, empName, empEmail);
 
-            expect(newEmployee.getName()).toBe(name)
+            expect(newEngineer.getName()).toBe(empName);
+        })
+    })
+
+    describe("getId function", () => {
+        it("Should retrieve the value of the empId of an Engineer instance", () => {
+            const empName = "cesar";
+            const empId = 1;
+            const empEmail = "test@test.com";
+            const newEngineer = new Engineer(empName, empId, empEmail);
+
+            expect(newEngineer.getId()).toBe(empId);
+        })
+    })
+
+    describe("getEmail function", () => {
+        it("Should retrieve the value of the empEmail of an Engineer instance", () => {
+            const empName = "cesar";
+            const empId = 1;
+            const empEmail = "test@test.com";
+            const newEngineer = new Engineer(empName, empId, empEmail);
+
+            expect(newEngineer.getEmail()).toBe(empEmail);
+        })
+    })
+
+    describe("getRole function", () => {
+        it("Should retrieve the Engineer's position (Engineer)", () => {
+            const empName = "cesar";
+            const empId = 1;
+            const empEmail = "test@test.com";
+            const newEngineer = new Engineer(empName, empId, empEmail);
+
+            expect(newEngineer.getRole()).toBe("Engineer");
         })
     })
 })

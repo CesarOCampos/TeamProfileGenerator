@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+var html = `
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Team Profile Generator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
@@ -31,9 +30,9 @@
                             <h5 class="card-title">Engineer</h5>
                         </div>
                         <div class="card-body">
-                        <p class="card-text">ID:${engineer.id}</p>
-                        <p class="card-text">email:<a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                        <p class="card-text">Github Username:<a target = "_blank" href="https://github.com/${engineer.githubUsername}">${engineer.githubUsername}</a></p>
+                            <p class="card-text">ID:${engineer.id}</p>
+                            <p class="card-text">email:<a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                            <p class="card-text">Github Username:<a target = "_blank" href="https://github.com/${engineer.githubUsername}">${engineer.githubUsername}</a></p>
                         </div>
                     </div>
                 </div>
@@ -45,14 +44,12 @@
                             <h5 class="card-title">Intern</h5>
                         </div>
                         <div class="card-body">
-                        <p class="card-text">ID:${intern.id}</p>
-                        <p class="card-text">email:<a href="mailto:${intern.email}">${intern.email}</a></p>
-                        <p class="card-text">School:${intern.school}</p>
+                            <p class="card-text">ID:${intern.id}</p>
+                            <p class="card-text">email:<a href="mailto:${intern.email}">${intern.email}</a></p>
+                            <p class="card-text">School:${intern.school}</p>
                         </div>
                     </div>
                 </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
-        crossorigin="anonymous"></script>   
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>        
     </body>
-</html>
+</html>`;
